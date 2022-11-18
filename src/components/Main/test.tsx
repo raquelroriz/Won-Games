@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import Input from "react-validation/build/input"
 
 import Main from '.'
 
