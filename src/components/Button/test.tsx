@@ -6,7 +6,7 @@ import Button from '.'
 
 describe('<Button />', () => {
   it('should render the medium size by default', () => {
-    const {container} = renderWithTheme(<Button>Buy now</Button>)
+    const { container } = renderWithTheme(<Button>Buy now</Button>)
 
     // esse i da linha de baixo, quer dizer que pode ser minusculo ou maiscula as letras
     expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
@@ -45,25 +45,25 @@ describe('<Button />', () => {
   })
 
   it('should render an icon version', () => {
-    renderWithTheme(<Button icon={<AddShoppingCart data-testid="icon"/>}>Buy now</Button>)
+    renderWithTheme(
+      <Button icon={<AddShoppingCart data-testid="icon" />}>Buy now</Button>
+    )
 
     expect(screen.getByText(/buy now/i)).toBeInTheDocument()
     expect(screen.getByTestId('icon')).toBeInTheDocument()
-
   })
 
   it('should render Buttob as a link', () => {
-   const { debug, container } =
-    renderWithTheme(
+    const { debug, container } = renderWithTheme(
       <Button as="a" href="/link">
         Buy now
       </Button>
     )
 
-debug(container)
-// com esse debug ele imprimi na tela a tipagem do botton, igual um console.log
+    debug(container)
+    // com esse debug ele imprimi na tela a tipagem do botton, igual um console.log
 
-    expect(screen.getByRole('link', { name: /buy now/i})).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /buy now/i })).toHaveAttribute(
       'href',
       '/link'
     )

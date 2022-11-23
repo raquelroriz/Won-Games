@@ -33,7 +33,6 @@ export const asLink: Story = (args) => <Button {...args} />
 asLink.args = {
   size: 'large',
   children: 'Buy now',
-  as: "a",
+  as: 'a',
   href: '/link'
-
 }

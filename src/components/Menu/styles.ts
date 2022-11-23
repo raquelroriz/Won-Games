@@ -1,12 +1,12 @@
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.menu`
-${({ theme }) => css`
-  display: flex;
-  align-items: center;
-  padding: ${theme.spacings.small} 0;
-  position: relative;
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    padding: ${theme.spacings.small} 0;
+    position: relative;
   `}
 `
 export const LogoWrapper = styled.div`
@@ -31,7 +31,7 @@ export const MenuGroup = styled.div`
     justify-content: flex-end;
     align-items: center;
 
-    >div {
+    > div {
       margin-left: ${theme.spacings.xsmall};
     }
   `}
@@ -80,7 +80,7 @@ type MenuFullProps = {
   isOpen: boolean
 }
 export const MenuFull = styled.nav<MenuFullProps>`
-  ${({theme, isOpen}) => css`
+  ${({ theme, isOpen }) => css`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -127,8 +127,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
       transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
       transition: transform 0.3s ease-in-out;
     }
-`}
-
+  `}
 `
 export const RegisterBox = styled.div`
   ${({ theme }) => css`
