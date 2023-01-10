@@ -51,7 +51,7 @@ describe('<Radio />', () => {
     expect(onCheck).toHaveBeenCalledWith('anyValue')
   })
 
-  it('Should be accessible with tab', () => {
+  it('Should be accessible with tab', async () => {
     renderWithTheme(<Radio label="Radio" labelFor="Radio" />)
 
     const radio = screen.getByLabelText('Radio')
@@ -60,6 +60,8 @@ describe('<Radio />', () => {
 
     userEvent.tab()
 
-    expect(radio).not.toHaveFocus()
+    await waitFor(() => {
+      expect(radio).toHaveFocus()
+    })
   })
 })
