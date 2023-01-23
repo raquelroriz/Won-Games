@@ -2,6 +2,7 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import GameInfo, { GameInfoProps } from '.'
 import mockGame from './mock'
 
+// aqui no title nós escolhemos onde fica no storybook
 export default {
   title: 'Game/GameInfo',
   component: GameInfo,
