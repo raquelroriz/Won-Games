@@ -20,6 +20,7 @@ describe('<Container />', () => {
     // preenche sozinho a parte do css
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
+        widht: 100%;
         max-width: 130rem;
         margin-left: auto;
         margin-right: auto;
