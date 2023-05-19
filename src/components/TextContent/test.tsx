@@ -11,9 +11,11 @@ const props = {
 describe('<TextContent />', () => {
   it('should render the title and content', () => {
     renderWithTheme(<TextContent {...props} />)
+
     expect(
       screen.getByRole('heading', { name: /description/i })
     ).toBeInTheDocument()
+
     expect(
       screen.getByRole('heading', { name: /content/i })
     ).toBeInTheDocument()
@@ -32,7 +34,9 @@ describe('<TextContent />', () => {
 
     const wrapper = screen.getByRole('heading', { name: /description/i })
       .parentElement
+
     expect(wrapper).toHaveStyle({ color: '#FAFAFA' }) // theme.colors.white
+
     expect(wrapper).toHaveStyleRule('color', '#030517', {
       media: '(min-width: 768px)'
     })
