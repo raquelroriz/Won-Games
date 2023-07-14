@@ -1,12 +1,12 @@
 import GameItem, { GameItemProps } from 'components/GameItem'
 import * as S from './styles'
 
-export type CartListPropos = {
+export type CartListProps = {
   items: GameItemProps[]
   total: string
 }
 
-const CartList = ({ items, total }: CartListPropos) => (
+const CartList = ({ items, total }: CartListProps) => (
   <S.Wrapper>
     {items.map((item) => (
       <GameItem key={item.title} {...item} />
